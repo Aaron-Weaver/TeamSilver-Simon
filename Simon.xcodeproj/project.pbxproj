@@ -14,6 +14,8 @@
 		1C27AA9E1B98887A001A586B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C27AA9C1B98887A001A586B /* LaunchScreen.storyboard */; };
 		1C27AAA91B98887B001A586B /* SimonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AAA81B98887B001A586B /* SimonTests.swift */; };
 		1C27AAB41B98887B001A586B /* SimonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AAB31B98887B001A586B /* SimonUITests.swift */; };
+		1CB728CD1B9E1E2F005B4DFB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */; };
+		1CB728CE1B9E1E2F005B4DFB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		1C27AAAF1B98887B001A586B /* SimonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C27AAB31B98887B001A586B /* SimonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonUITests.swift; sourceTree = "<group>"; };
 		1C27AAB51B98887B001A586B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 		1C27AA921B98887A001A586B /* Simon */ = {
 			isa = PBXGroup;
 			children = (
+				1CB728CB1B9E1C0F005B4DFB /* Model */,
 				1C27AA931B98887A001A586B /* AppDelegate.swift */,
 				1C27AA951B98887A001A586B /* ViewController.swift */,
 				1C27AA971B98887A001A586B /* Main.storyboard */,
@@ -123,6 +127,14 @@
 				1C27AAB51B98887B001A586B /* Info.plist */,
 			);
 			path = SimonUITests;
+			sourceTree = "<group>";
+		};
+		1CB728CB1B9E1C0F005B4DFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +269,7 @@
 			files = (
 				1C27AA961B98887A001A586B /* ViewController.swift in Sources */,
 				1C27AA941B98887A001A586B /* AppDelegate.swift in Sources */,
+				1CB728CD1B9E1E2F005B4DFB /* GameLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C27AAA91B98887B001A586B /* SimonTests.swift in Sources */,
+				1CB728CE1B9E1E2F005B4DFB /* GameLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +495,7 @@
 				1C27AABA1B98887B001A586B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C27AABB1B98887B001A586B /* Build configuration list for PBXNativeTarget "SimonTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +504,7 @@
 				1C27AABD1B98887B001A586B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C27AABE1B98887B001A586B /* Build configuration list for PBXNativeTarget "SimonUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +513,7 @@
 				1C27AAC01B98887B001A586B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
