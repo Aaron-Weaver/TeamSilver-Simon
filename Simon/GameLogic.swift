@@ -29,14 +29,16 @@ public enum GameButton
 
     - Success: Reflects player's successful completion of an entire sequence.
     - Fail: Reflects player's failure to recreate the proper sequence.
-    - NewRound: Reflects player's completion of an entire round.
+    - RoundComplete: Reflects player's completion of an entire round.
+    - NewGame: Restarts the game.
     - CorrectMatch: Reflects player's completion of a single step of the proper sequence.
 */
 public enum GameState
 {
     case Success
     case Fail
-    case NewRound
+    case RoundComplete
+    case NewGame
     case CorrectMatch
 }
 
@@ -56,14 +58,11 @@ class GameLogic
     /// List containing the proper sequence of button presses for the current game.
     private var sequenceList = [(GameButton)]()
     
-    /// Represents the games current state.
-    private var currentGameState = GameState.NewRound
-    
     /// Current index within the game's generated sequence.
     private var currentSequenceIndex = 0
     
     /// Max number of possible buttons in a sequence per round.
-    let maxSequenceItemNum = 12
+    private let maxSequenceItemNum = 12
     
     /** 
         Initialize GameLogic with a single random button in the game sequence.
@@ -78,7 +77,7 @@ class GameLogic
     /** 
         Add a random button to the sequence list.
     */
-    func addRandomButtonToSequence()
+    private func addRandomButtonToSequence()
     {
         let randomInt = Int(arc4random_uniform(4))
         
@@ -86,19 +85,18 @@ class GameLogic
         {
             case 0:
                 sequenceList.append(GameButton.Red)
-                break;
+                break
             case 1:
                 sequenceList.append(GameButton.Yellow)
-                break;
+                break
             case 2:
                 sequenceList.append(GameButton.Green)
-                break;
+                break
             case 3:
                 sequenceList.append(GameButton.Blue)
-                break;
+                break
             default:
-                sequenceList.append(GameButton.Blue)
-                break;
+                break
         }
     }
     
@@ -108,6 +106,7 @@ class GameLogic
     private func resetSequence()
     {
         currentSequenceIndex = 0
+        Scores.currentScore = 0
         sequenceList.removeAll()
         addRandomButtonToSequence()
     }
@@ -115,9 +114,9 @@ class GameLogic
     /**
         Perform a game logic operation based on the current state of the game.
     */
-    private func checkGameState()
+    private func checkGameState(gameState: GameState) -> GameState
     {
-        switch(currentGameState)
+        switch(gameState)
         {
             /// Reset sequence index and update scores to reflect completion of a sequence.
             case GameState.Success:
@@ -134,13 +133,13 @@ class GameLogic
             
             /// Reset back to initial game state and update score to reflect a fail state.
             case GameState.Fail:
-                Scores.currentScore = 0
                 resetSequence()
                 break
             
             /// Reset back to initial game state and update score to reflect a round win.
-            case GameState.NewRound:
-                Scores.highestScore = maxSequenceItemNum
+            case GameState.RoundComplete:
+                Scores.currentScore = maxSequenceItemNum
+                Scores.highestScore = Scores.currentScore
                 resetSequence()
                 break
             
@@ -148,7 +147,14 @@ class GameLogic
             case GameState.CorrectMatch:
                 currentSequenceIndex++
                 break
+            
+            /// Reset game back to initial state.
+            case GameState.NewGame:
+                resetSequence()
+                break
         }
+        
+        return gameState
     }
     
     /**
@@ -161,30 +167,36 @@ class GameLogic
     */
     func checkSequenceWithGameButton(button: GameButton) -> GameState
     {
+        var currentGameState: GameState
+        
         if sequenceList[currentSequenceIndex] == button
         {
             if currentSequenceIndex == maxSequenceItemNum - 1
             {
                 //return GameState.NewRound
-                self.currentGameState = GameState.NewRound
+                currentGameState = GameState.RoundComplete
             }
             else if currentSequenceIndex == sequenceList.count - 1
             {
-                self.currentGameState = GameState.Success
+                currentGameState = GameState.Success
             }
             else
             {
-                self.currentGameState = GameState.CorrectMatch
+                currentGameState = GameState.CorrectMatch
             }
         }
         else
         {
-            self.currentGameState = GameState.Fail
+            currentGameState = GameState.Fail
         }
         
-        checkGameState()
-        
-        return currentGameState
+        return checkGameState(currentGameState)
+    }
+    
+    func reinitializeGame()
+    {
+        let currentGameState = GameState.NewGame
+        checkGameState(currentGameState)
     }
     
     func getHighScore() -> Int
