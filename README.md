@@ -22,3 +22,5 @@ Aaron Weaver
 [Alcatraz: A Fantastic XCode Package Manager (Highly Recommended)](http://alcatraz.io/)
 
 [Swift Documentation Style Guide: For Documenting Your Code Properly](http://nshipster.com/swift-documentation/)
+
+[Basic Git/Github Tutorial for Beginners](https://try.github.io/levels/1/challenges/1)
