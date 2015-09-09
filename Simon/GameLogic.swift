@@ -9,6 +9,22 @@
 import Foundation
 
 /**
+    Protocol defining an observer pattern for a change in GameState.
+*/
+protocol StateObserver
+{
+    func onGameSuccess()
+    
+    func onGameFail()
+    
+    func onGameRoundComplete()
+    
+    func onGameNewGame()
+    
+    func onGameCorrectMatch()
+}
+
+/**
     Color coded buttons that can be pressed by player to match a specified sequence.
 
     - Red Button.
@@ -22,6 +38,7 @@ public enum GameButton
     case Yellow
     case Green
     case Blue
+    case NewGame
 }
 
 /**
@@ -64,14 +81,18 @@ class GameLogic
     /// Max number of possible buttons in a sequence per round.
     private let maxSequenceItemNum = 12
     
+    private var stateObserver: StateObserver
+    
     /** 
         Initialize GameLogic with a single random button in the game sequence.
     
         :returns: GameLogic with a single button in the sequence.
     */
-    init()
+    init(stateObserver: StateObserver)
     {
+        self.stateObserver = stateObserver
         addRandomButtonToSequence()
+        checkButtonPressedWithGameButton(self.sequenceList[0])
     }
     
     /** 
@@ -129,11 +150,13 @@ class GameLogic
                 }
                 
                 addRandomButtonToSequence()
+                self.stateObserver.onGameSuccess()
                 break
             
             /// Reset back to initial game state and update score to reflect a fail state.
             case GameState.Fail:
                 resetSequence()
+                self.stateObserver.onGameFail()
                 break
             
             /// Reset back to initial game state and update score to reflect a round win.
@@ -141,16 +164,19 @@ class GameLogic
                 Scores.currentScore = maxSequenceItemNum
                 Scores.highestScore = Scores.currentScore
                 resetSequence()
+                self.stateObserver.onGameRoundComplete()
                 break
             
             /// Add to sequence index after making a correct match within the proper sequence.
             case GameState.CorrectMatch:
                 currentSequenceIndex++
+                self.stateObserver.onGameCorrectMatch()
                 break
             
             /// Reset game back to initial state.
             case GameState.NewGame:
                 resetSequence()
+                self.stateObserver.onGameNewGame()
                 break
         }
         
@@ -165,7 +191,7 @@ class GameLogic
     
         :returns: The game state after button pressed is analyzed.
     */
-    func checkSequenceWithGameButton(button: GameButton) -> GameState
+    func checkButtonPressedWithGameButton(button: GameButton)
     {
         var currentGameState: GameState
         
@@ -185,12 +211,16 @@ class GameLogic
                 currentGameState = GameState.CorrectMatch
             }
         }
+        else if button == GameButton.NewGame
+        {
+            currentGameState = GameState.NewGame
+        }
         else
         {
             currentGameState = GameState.Fail
         }
         
-        return checkGameState(currentGameState)
+        checkGameState(currentGameState)
     }
     
     func reinitializeGame()

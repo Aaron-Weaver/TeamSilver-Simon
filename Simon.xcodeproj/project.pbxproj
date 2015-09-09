@@ -13,6 +13,7 @@
 		1C27AA9E1B98887A001A586B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C27AA9C1B98887A001A586B /* LaunchScreen.storyboard */; };
 		1C27AAA91B98887B001A586B /* SimonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AAA81B98887B001A586B /* SimonTests.swift */; };
 		1C27AAB41B98887B001A586B /* SimonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AAB31B98887B001A586B /* SimonUITests.swift */; };
+		1C579E911B9FC59E009A52F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AA951B98887A001A586B /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		1CB728CD1B9E1E2F005B4DFB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */; };
 		1CB728CE1B9E1E2F005B4DFB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */; };
 		1CB728D01B9EA432005B4DFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB728CF1B9EA432005B4DFB /* Images.xcassets */; };
@@ -285,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C579E911B9FC59E009A52F5 /* ViewController.swift in Sources */,
 				1C27AAA91B98887B001A586B /* SimonTests.swift in Sources */,
 				1CB728CE1B9E1E2F005B4DFB /* GameLogic.swift in Sources */,
 			);

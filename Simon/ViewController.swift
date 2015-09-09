@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StateObserver {
     
-    var gameLogic = GameLogic()
-
+    /// Logic object for the Simon game.
+    var gameLogic: GameLogic?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameLogic = GameLogic(stateObserver: self)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,32 +26,43 @@ class ViewController: UIViewController {
 
     
     /// Example use of the game logic against a button press.
-    func redButtonClicked(sender: UIButton)
+    func buttonClicked(sender: UIButton)
     {
+        /// Find out which button was pressed.
+        var buttonPressed: GameButton
+        buttonPressed = GameButton.Red
+        
         /// Function returns a game state that can then be handled by the UI.
-        let gameState = self.gameLogic.checkSequenceWithGameButton(GameButton.Red)
-        
-        /// Handle your game state somehow. List of game states and their descriptions is available
-        /// in the GameLogic.swift class.
-        handleUIWithGameState(gameState)
+        self.gameLogic!.checkButtonPressedWithGameButton(buttonPressed)
     }
     
-    /// Example use of game logic to re-start game.
-    func newGameClicked(sender: UIButton)
+    /// The methods below will be called upon an update in the game's status.
+    /// Refer to the GameState enum in GameLogic for detailed description of each
+    /// state, then decide on how to handle it with the UI.
+    func onGameSuccess()
     {
-        self.gameLogic.reinitializeGame()
-    }
-
-    private func handleUIWithGameState(gameState: GameState)
-    {
-        // Handle game state with UI here.
+        /// Handle for if the user successfully completes an entire sequence.
     }
     
-    private func showSequenceToUser()
+    func onGameFail()
     {
-        let sequence = self.gameLogic.getButtonSequence()
-        
-        /// Handle showing the sequence to the user.
+        /// Handle for if the user fails the game.
+    }
+    
+    func onGameRoundComplete()
+    {
+        /// Handle for if the user completes an entire round.
+    }
+    
+    func onGameNewGame()
+    {
+        /// Handle for if user desires to start a new game.
+    }
+    
+    func onGameCorrectMatch()
+    {
+        /// Handle for if user has created a correct single match within a sequence.
+        /// We might not need this one, I just have it for posterity's sake.
+        /// Feel free to remove this method if you do not use it.
     }
 }
-
