@@ -61,7 +61,7 @@ class ViewController: UIViewController, StateObserver {
     
     func onGameCorrectMatch()
     {
-        /// Handle for if user has created a correct single match within a sequence.
+        /// Handle for if user has managed a correct single match within a sequence.
         /// We might not need this one, I just have it for posterity's sake.
         /// Feel free to remove this method if you do not use it.
     }
