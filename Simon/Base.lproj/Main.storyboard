@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,64 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" highlightedImage="green-press.png" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-me-QTh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green" highlightedImage="green-press" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-me-QTh">
                                 <rect key="frame" x="333" y="205" width="334" height="170"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellow.png" highlightedImage="yellow-press.png" translatesAutoresizingMaskIntoConstraints="NO" id="dkt-Ir-yfW">
-                                <rect key="frame" x="0.0" y="205" width="334" height="170"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue.png" highlightedImage="blue-press.png" translatesAutoresizingMaskIntoConstraints="NO" id="a8I-fQ-epq">
-                                <rect key="frame" x="497" y="41" width="170" height="334"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                </accessibility>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red.png" highlightedImage="red-press.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tit-cp-IPv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" highlightedImage="red-press" translatesAutoresizingMaskIntoConstraints="NO" id="Tit-cp-IPv">
                                 <rect key="frame" x="0.0" y="41" width="170" height="334"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" highlightedImage="new-press.png" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-4q-8BN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new" highlightedImage="new-press" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-4q-8BN">
                                 <rect key="frame" x="251" y="126" width="164" height="164"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated.png" highlightedImage="light-on-rotated.png" translatesAutoresizingMaskIntoConstraints="NO" id="30n-Rz-vUA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="30n-Rz-vUA">
                                 <rect key="frame" x="5" y="20" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated.png" highlightedImage="light-on-rotated.png" translatesAutoresizingMaskIntoConstraints="NO" id="le5-VS-3c8">
-                                <rect key="frame" x="59" y="74" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated.png" highlightedImage="light-on-rotated.png" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-wi-GXJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-wi-GXJ">
                                 <rect key="frame" x="114" y="129" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated.png" highlightedImage="light-on-rotated.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-E2-oaP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-E2-oaP">
                                 <rect key="frame" x="168" y="182" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated.png" highlightedImage="light-on-rotated.png" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-iE-kls">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-iE-kls">
                                 <rect key="frame" x="220" y="234" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated.png" highlightedImage="light-on-rotated.png" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-6M-Uke">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-6M-Uke">
                                 <rect key="frame" x="271" y="284" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2.png" highlightedImage="light-on-rotated2.png" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-Hg-t97">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-Hg-t97">
                                 <rect key="frame" x="606" y="20" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2.png" highlightedImage="light-on-rotated2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-Mx-goX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-Mx-goX">
                                 <rect key="frame" x="552" y="74" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2.png" highlightedImage="light-on-rotated2.png" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-jP-syM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-jP-syM">
                                 <rect key="frame" x="497" y="129" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2.png" highlightedImage="light-on-rotated2.png" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-Zm-pTs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-Zm-pTs">
                                 <rect key="frame" x="446" y="182" width="54" height="56"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2.png" highlightedImage="light-on-rotated2.png" translatesAutoresizingMaskIntoConstraints="NO" id="JJ2-H4-4e6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="JJ2-H4-4e6">
                                 <rect key="frame" x="394" y="234" width="54" height="56"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-pj-K9l">
@@ -100,14 +85,58 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2.png" highlightedImage="light-on-rotated2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-v3-EGp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-v3-EGp">
                                 <rect key="frame" x="342" y="284" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="le5-VS-3c8">
+                                <rect key="frame" x="58" y="74" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" highlightedImage="blue-press" translatesAutoresizingMaskIntoConstraints="NO" id="a8I-fQ-epq">
+                                <rect key="frame" x="497" y="41" width="170" height="334"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZW-qw-KAX" userLabel="BlueButton">
+                                <rect key="frame" x="567" y="143" width="100" height="133"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89n-5D-ZvQ" userLabel="RedButton">
+                                <rect key="frame" x="5" y="141" width="100" height="133"/>
+                                <connections>
+                                    <action selector="redButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDJ-Kh-fuz"/>
+                                    <action selector="redButtonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="yh9-hi-P5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXt-BZ-srN" userLabel="YellowButton">
+                                <rect key="frame" x="91" y="284" width="152" height="95"/>
+                                <connections>
+                                    <action selector="yellowButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yAI-QB-ipu"/>
+                                    <action selector="yellowButtonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="7Br-6a-gv1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmu-2y-ZaD" userLabel="GreenButton">
+                                <rect key="frame" x="424" y="280" width="152" height="95"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fk-q1-H3Y" userLabel="NewGameButton">
+                                <rect key="frame" x="297" y="167" width="78" height="78"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellow" highlightedImage="yellow-press" translatesAutoresizingMaskIntoConstraints="NO" id="dkt-Ir-yfW">
+                                <rect key="frame" x="0.0" y="205" width="334" height="170"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueButtonBackground" destination="a8I-fQ-epq" id="iQO-vn-h9o"/>
+                        <outlet property="greenButtonBackground" destination="sh4-me-QTh" id="ugD-T1-CQY"/>
+                        <outlet property="redButtonBackground" destination="Tit-cp-IPv" id="6ga-bf-csg"/>
+                        <outlet property="yellowButtonBackground" destination="dkt-Ir-yfW" id="AL0-PA-Yv3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,19 +144,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blue-press.png" width="333" height="667"/>
-        <image name="blue.png" width="333" height="667"/>
-        <image name="green-press.png" width="667" height="333"/>
-        <image name="green.png" width="667" height="333"/>
-        <image name="light-off-rotated.png" width="103" height="104"/>
-        <image name="light-off-rotated2.png" width="103" height="104"/>
-        <image name="light-on-rotated.png" width="103" height="104"/>
-        <image name="light-on-rotated2.png" width="103" height="104"/>
-        <image name="new-press.png" width="298" height="298"/>
-        <image name="new.png" width="298" height="298"/>
-        <image name="red-press.png" width="333" height="667"/>
-        <image name="red.png" width="333" height="667"/>
-        <image name="yellow-press.png" width="667" height="333"/>
-        <image name="yellow.png" width="667" height="333"/>
+        <image name="blue" width="333" height="667"/>
+        <image name="blue-press" width="333" height="667"/>
+        <image name="green" width="667" height="333"/>
+        <image name="green-press" width="667" height="333"/>
+        <image name="light-off-rotated" width="103" height="104"/>
+        <image name="light-off-rotated2" width="103" height="104"/>
+        <image name="light-on-rotated" width="103" height="104"/>
+        <image name="light-on-rotated2" width="103" height="104"/>
+        <image name="new" width="298" height="298"/>
+        <image name="new-press" width="298" height="298"/>
+        <image name="red" width="333" height="667"/>
+        <image name="red-press" width="333" height="667"/>
+        <image name="yellow" width="667" height="333"/>
+        <image name="yellow-press" width="667" height="333"/>
     </resources>
 </document>
