@@ -48,6 +48,13 @@ class ViewController: UIViewController, StateObserver {
         redButtonBackground.image = UIImage(named: "red")
     }
     
+    @IBAction func yellowButtonPressDown(sender: UIButton) {
+        yellowButtonBackground.image = UIImage(named: "yellow-press")
+    }
+    @IBAction func yellowButtonPress(sender: UIButton) {
+        yellowButtonBackground.image = UIImage(named: "yellow")
+        print("yellow")
+    }
     /// The methods below will be called upon an update in the game's status.
     /// Refer to the GameState enum in GameLogic for detailed description of each
     /// state, then decide on how to handle it with the UI.
