@@ -28,12 +28,6 @@
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" highlightedImage="blue-press" translatesAutoresizingMaskIntoConstraints="NO" id="a8I-fQ-epq">
-                                <rect key="frame" x="497" y="41" width="170" height="334"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                </accessibility>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" highlightedImage="red-press" translatesAutoresizingMaskIntoConstraints="NO" id="Tit-cp-IPv">
                                 <rect key="frame" x="0.0" y="41" width="170" height="334"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -103,11 +97,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="le5-VS-3c8">
                                 <rect key="frame" x="58" y="74" width="54" height="56"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" highlightedImage="blue-press" translatesAutoresizingMaskIntoConstraints="NO" id="a8I-fQ-epq">
+                                <rect key="frame" x="497" y="41" width="170" height="334"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZW-qw-KAX" userLabel="BlueButton">
+                                <rect key="frame" x="567" y="143" width="100" height="133"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89n-5D-ZvQ" userLabel="RedButton">
+                                <rect key="frame" x="5" y="141" width="100" height="133"/>
+                                <connections>
+                                    <action selector="redButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDJ-Kh-fuz"/>
+                                    <action selector="redButtonPressDown:" destination="BYZ-38-t0r" eventType="touchDown" id="yh9-hi-P5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXt-BZ-srN" userLabel="YellowButton">
+                                <rect key="frame" x="91" y="284" width="152" height="95"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmu-2y-ZaD" userLabel="GreenButton">
+                                <rect key="frame" x="424" y="280" width="152" height="95"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fk-q1-H3Y" userLabel="NewGameButton">
+                                <rect key="frame" x="297" y="167" width="78" height="78"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueButtonBackground" destination="a8I-fQ-epq" id="iQO-vn-h9o"/>
+                        <outlet property="greenButtonBackground" destination="sh4-me-QTh" id="ugD-T1-CQY"/>
+                        <outlet property="redButtonBackground" destination="Tit-cp-IPv" id="6ga-bf-csg"/>
+                        <outlet property="yellowButtonBackground" destination="dkt-Ir-yfW" id="AL0-PA-Yv3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
