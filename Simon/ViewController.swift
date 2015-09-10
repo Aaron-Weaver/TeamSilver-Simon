@@ -9,11 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, StateObserver {
-
-    @IBOutlet weak var redButtonBackground: UIImageView!
-    @IBOutlet weak var yellowButtonBackground: UIImageView!
-    @IBOutlet weak var greenButtonBackground: UIImageView!
-    @IBOutlet weak var blueButtonBackground: UIImageView!
+    
     /// Logic object for the Simon game.
     var gameLogic: GameLogic?
     
@@ -40,21 +36,6 @@ class ViewController: UIViewController, StateObserver {
         self.gameLogic!.checkButtonPressedWithGameButton(buttonPressed)
     }
     
-    @IBAction func redButtonPressDown(sender: UIButton) {
-        redButtonBackground.image = UIImage(named: "red-press")
-    }
-    @IBAction func redButtonPress(sender: UIButton) {
-        print("RED")
-        redButtonBackground.image = UIImage(named: "red")
-    }
-    
-    @IBAction func yellowButtonPressDown(sender: UIButton) {
-        yellowButtonBackground.image = UIImage(named: "yellow-press")
-    }
-    @IBAction func yellowButtonPress(sender: UIButton) {
-        yellowButtonBackground.image = UIImage(named: "yellow")
-        print("yellow")
-    }
     /// The methods below will be called upon an update in the game's status.
     /// Refer to the GameState enum in GameLogic for detailed description of each
     /// state, then decide on how to handle it with the UI.
