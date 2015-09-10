@@ -20,6 +20,7 @@
 		1CB728D11B9EA432005B4DFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB728CF1B9EA432005B4DFB /* Images.xcassets */; };
 		1CB728DA1B9EAF13005B4DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB728D81B9EAF13005B4DFB /* Main.storyboard */; };
 		1CB728DB1B9EAF13005B4DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB728D81B9EAF13005B4DFB /* Main.storyboard */; };
+		EDB935011BA1DD1900230D19 /* SOXShapedTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB935001BA1DD1900230D19 /* SOXShapedTapButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		1CB728CF1B9EA432005B4DFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1CB728D91B9EAF13005B4DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Simon/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDB935001BA1DD1900230D19 /* SOXShapedTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOXShapedTapButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				1CB728CB1B9E1C0F005B4DFB /* Model */,
 				1C27AA931B98887A001A586B /* AppDelegate.swift */,
 				1C27AA951B98887A001A586B /* ViewController.swift */,
+				EDB935001BA1DD1900230D19 /* SOXShapedTapButton.swift */,
 				1C27AA9A1B98887A001A586B /* Assets.xcassets */,
 				1CB728CF1B9EA432005B4DFB /* Images.xcassets */,
 				1CB728D81B9EAF13005B4DFB /* Main.storyboard */,
@@ -279,6 +282,7 @@
 				1C27AA961B98887A001A586B /* ViewController.swift in Sources */,
 				1C27AA941B98887A001A586B /* AppDelegate.swift in Sources */,
 				1CB728CD1B9E1E2F005B4DFB /* GameLogic.swift in Sources */,
+				EDB935011BA1DD1900230D19 /* SOXShapedTapButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
