@@ -56,10 +56,19 @@ class ViewController: UIViewController, StateObserver {
     }
 
     
-    @IBAction func onRedButtonTouchUp(sender: SOXShapedTapButton) {
+    @IBAction func onRedButtonTouchUp(sender: UIButton) {
         self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Red)
     }
     
+    @IBAction func onYellowButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Yellow)
+    }
+    @IBAction func onGreenButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Green)
+    }
+    @IBAction func onBlueButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Blue)
+    }
     /// Example use of the game logic against a button press.
     func buttonClicked(sender: UIButton)
     {
@@ -77,11 +86,14 @@ class ViewController: UIViewController, StateObserver {
     func onGameSuccess()
     {
         /// Handle for if the user successfully completes an entire sequence.
+        // TODO: remove this
+        print("success")
     }
     
     func onGameFail()
     {
         /// Handle for if the user fails the game.
+        // TODO: remove this
         print("fail")
     }
     

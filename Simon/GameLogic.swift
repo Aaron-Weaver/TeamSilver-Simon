@@ -119,6 +119,7 @@ class GameLogic
             default:
                 break
         }
+        // TODO: remove this loop
         for button in sequenceList {
             print(button)
         }

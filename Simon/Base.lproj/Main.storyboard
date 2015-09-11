@@ -79,6 +79,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-4b-cRx" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="215" width="314" height="160"/>
                                 <state key="normal" title="Button" image="yellow"/>
+                                <connections>
+                                    <action selector="onYellowButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CU2-o8-SOe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwv-xh-g6i" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="157" height="319"/>
@@ -90,10 +93,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="508" y="60" width="159" height="315"/>
                                 <state key="normal" title="Button" image="blue"/>
+                                <connections>
+                                    <action selector="onBlueButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRw-iH-9lY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="352" y="216" width="315" height="159"/>
                                 <state key="normal" title="Button" image="green"/>
+                                <connections>
+                                    <action selector="onGreenButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9i-db-NWX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNn-Un-l3D" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="259" y="113" width="149" height="149"/>
