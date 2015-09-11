@@ -96,12 +96,4 @@ class ViewController: UIViewController, StateObserver {
     {
         /// Handle for if user desires to start a new game.
     }
-    
-    func onGameCorrectMatch()
-    {
-        /// Handle for if user has managed a correct single match within a sequence.
-        /// We might not need this one, I just have it for posterity's sake.
-        /// Feel free to remove this method if you do not use it.
-        print("correct")
-    }
 }
