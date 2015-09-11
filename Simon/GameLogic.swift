@@ -20,8 +20,6 @@ protocol StateObserver
     func onGameRoundComplete()
     
     func onGameNewGame()
-    
-    func onGameCorrectMatch()
 }
 
 /**
@@ -174,7 +172,6 @@ class GameLogic
             /// Add to sequence index after making a correct match within the proper sequence.
             case GameState.CorrectMatch:
                 currentSequenceIndex++
-                self.stateObserver.onGameCorrectMatch()
                 break
             
             /// Reset game back to initial state.
