@@ -69,16 +69,6 @@ class ViewController: UIViewController, StateObserver {
     @IBAction func onBlueButtonTouchUp(sender: UIButton) {
         self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Blue)
     }
-    /// Example use of the game logic against a button press.
-    func buttonClicked(sender: UIButton)
-    {
-        /// Find out which button was pressed.
-        var buttonPressed: GameButton
-        buttonPressed = GameButton.Red
-        
-        /// Function returns a game state that can then be handled by the UI.
-        self.gameLogic!.checkButtonPressedWithGameButton(buttonPressed)
-    }
     
     /// The methods below will be called upon an update in the game's status.
     /// Refer to the GameState enum in GameLogic for detailed description of each
@@ -109,7 +99,6 @@ class ViewController: UIViewController, StateObserver {
     
     func onGameCorrectMatch()
     {
-        sequenceLightList[gameLogic!.getButtonSequence().count - 1].image = UIImage(named: "light-on-rotated")
         /// Handle for if user has managed a correct single match within a sequence.
         /// We might not need this one, I just have it for posterity's sake.
         /// Feel free to remove this method if you do not use it.
