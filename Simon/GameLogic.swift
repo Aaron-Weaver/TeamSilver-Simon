@@ -13,7 +13,7 @@ import Foundation
 */
 protocol StateObserver
 {
-    func onGameSuccess()
+    func onSequenceSuccess()
     
     func onGameFail()
     
@@ -154,7 +154,7 @@ class GameLogic
                 }
                 
                 addRandomButtonToSequence()
-                self.stateObserver.onGameSuccess()
+                self.stateObserver.onSequenceSuccess()
                 break
             
             /// Reset back to initial game state and update score to reflect a fail state.

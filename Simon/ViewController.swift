@@ -83,7 +83,7 @@ class ViewController: UIViewController, StateObserver {
     /// The methods below will be called upon an update in the game's status.
     /// Refer to the GameState enum in GameLogic for detailed description of each
     /// state, then decide on how to handle it with the UI.
-    func onGameSuccess()
+    func onSequenceSuccess()
     {
         /// Handle for if the user successfully completes an entire sequence.
         // TODO: remove this
