@@ -97,6 +97,7 @@ class ViewController: UIViewController, StateObserver {
     
     func onGameCorrectMatch()
     {
+        sequenceLightList[gameLogic!.getButtonSequence().count - 1].image = UIImage(named: "light-on-rotated")
         /// Handle for if user has managed a correct single match within a sequence.
         /// We might not need this one, I just have it for posterity's sake.
         /// Feel free to remove this method if you do not use it.

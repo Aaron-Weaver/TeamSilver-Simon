@@ -119,6 +119,9 @@ class GameLogic
             default:
                 break
         }
+        for button in sequenceList {
+            print(button)
+        }
     }
     
     /**
