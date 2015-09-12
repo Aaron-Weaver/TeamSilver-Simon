@@ -55,19 +55,32 @@ class ViewController: UIViewController, StateObserver {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    @IBAction func onRedButtonTouchUp(sender: UIButton) {
-        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Red)
-    }
-    
-    @IBAction func onYellowButtonTouchUp(sender: UIButton) {
-        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Yellow)
-    }
-    @IBAction func onGreenButtonTouchUp(sender: UIButton) {
-        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Green)
-    }
-    @IBAction func onBlueButtonTouchUp(sender: UIButton) {
-        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Blue)
+    @IBAction func onGameButtonClicked(sender: UIButton) {
+        switch sender.tag
+        {
+            case 0:
+                self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Red)
+                print("Button Red")
+                break
+            case 1:
+                self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Yellow)
+                print("Button Yellow")
+                break
+            case 2:
+                self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Green)
+                print("Button Green")
+                break
+            case 3:
+                self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Blue)
+                print("Button Blue")
+                break
+            case 4:
+                self.gameLogic!.checkButtonPressedWithGameButton(GameButton.NewGame)
+                print("New Game")
+                break
+            default:
+                break
+        }
     }
     
     /// The methods below will be called upon an update in the game's status.
@@ -90,10 +103,12 @@ class ViewController: UIViewController, StateObserver {
     func onGameRoundComplete()
     {
         /// Handle for if the user completes an entire round.
+        print("round complete")
     }
     
     func onGameNewGame()
     {
         /// Handle for if user desires to start a new game.
+        print("new game")
     }
 }

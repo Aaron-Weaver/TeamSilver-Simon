@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,96 +17,99 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="30n-Rz-vUA" userLabel="sequenceLight1">
-                                <rect key="frame" x="5" y="20" width="54" height="56"/>
+                                <rect key="frame" x="42" y="46" width="54" height="56"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="le5-VS-3c8" userLabel="sequenceLight2">
-                                <rect key="frame" x="58" y="74" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-wi-GXJ" userLabel="sequenceLight3">
-                                <rect key="frame" x="114" y="129" width="54" height="56"/>
+                                <rect key="frame" x="89" y="93" width="54" height="56"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-E2-oaP" userLabel="sequenceLight4">
-                                <rect key="frame" x="168" y="182" width="54" height="56"/>
+                                <rect key="frame" x="183" y="187" width="54" height="56"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="T7z-iE-kls" userLabel="sequenceLight5">
-                                <rect key="frame" x="220" y="234" width="54" height="56"/>
+                                <rect key="frame" x="230" y="234" width="54" height="56"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-6M-Uke" userLabel="sequenceLight6">
-                                <rect key="frame" x="271" y="284" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-v3-EGp" userLabel="sequenceLight7">
-                                <rect key="frame" x="342" y="284" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="JJ2-H4-4e6" userLabel="sequenceLight8">
-                                <rect key="frame" x="394" y="234" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-Zm-pTs" userLabel="sequenceLight9">
-                                <rect key="frame" x="446" y="182" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-jP-syM" userLabel="sequenceLight10">
-                                <rect key="frame" x="497" y="129" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-Mx-goX" userLabel="sequenceLight11">
-                                <rect key="frame" x="552" y="74" width="54" height="56"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-Hg-t97" userLabel="sequenceLight12">
-                                <rect key="frame" x="606" y="20" width="54" height="56"/>
+                                <rect key="frame" x="278" y="282" width="54" height="56"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz3-pj-K9l">
                                 <rect key="frame" x="251" y="20" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="####" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wta-Uf-eXN">
                                 <rect key="frame" x="362" y="20" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcx-sG-adt">
                                 <rect key="frame" x="251" y="49" width="108" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="####" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W52-49-aXb">
-                                <rect key="frame" x="362" y="50" width="53" height="21"/>
+                                <rect key="frame" x="362" y="52" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-4b-cRx" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="215" width="314" height="160"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-4b-cRx" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="219" width="314" height="160"/>
                                 <state key="normal" title="Button" image="yellow"/>
                                 <connections>
-                                    <action selector="onYellowButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CU2-o8-SOe"/>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ci-DO-lCI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwv-xh-g6i" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="157" height="319"/>
+                                <rect key="frame" x="0.0" y="60" width="157" height="319"/>
                                 <state key="normal" title="Button" image="red"/>
                                 <connections>
-                                    <action selector="onRedButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQA-jj-jX9"/>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="955-43-Hbk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="508" y="60" width="159" height="315"/>
                                 <state key="normal" title="Button" image="blue"/>
                                 <connections>
-                                    <action selector="onBlueButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRw-iH-9lY"/>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD0-W5-ExY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="352" y="216" width="315" height="159"/>
                                 <state key="normal" title="Button" image="green"/>
                                 <connections>
-                                    <action selector="onGreenButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9i-db-NWX"/>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PI3-HP-PXM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNn-Un-l3D" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-wi-GXJ" userLabel="sequenceLight3">
+                                <rect key="frame" x="136" y="140" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-v3-EGp" userLabel="sequenceLight7">
+                                <rect key="frame" x="335" y="282" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="JJ2-H4-4e6" userLabel="sequenceLight8">
+                                <rect key="frame" x="383" y="234" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-jP-syM" userLabel="sequenceLight10">
+                                <rect key="frame" x="477" y="140" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-Mx-goX" userLabel="sequenceLight11">
+                                <rect key="frame" x="524" y="93" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-Zm-pTs" userLabel="sequenceLight9">
+                                <rect key="frame" x="430" y="187" width="54" height="56"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated2" highlightedImage="light-on-rotated2" translatesAutoresizingMaskIntoConstraints="NO" id="OMn-Hg-t97" userLabel="sequenceLight12">
+                                <rect key="frame" x="571" y="46" width="54" height="56"/>
+                            </imageView>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNn-Un-l3D" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="259" y="113" width="149" height="149"/>
                                 <state key="normal" image="new"/>
+                                <connections>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BrT-st-Yur"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
