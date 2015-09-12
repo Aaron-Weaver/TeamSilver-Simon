@@ -9,17 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController, StateObserver {
-
-    @IBOutlet weak var redButtonBackground: UIImageView!
-    @IBOutlet weak var yellowButtonBackground: UIImageView!
-    @IBOutlet weak var greenButtonBackground: UIImageView!
-    @IBOutlet weak var blueButtonBackground: UIImageView!
+    
+    /// Declare delegates for sequence lights
+    @IBOutlet weak var sequenceLight1: UIImageView!
+    @IBOutlet weak var sequenceLight2: UIImageView!
+    @IBOutlet weak var sequenceLight3: UIImageView!
+    @IBOutlet weak var sequenceLight4: UIImageView!
+    @IBOutlet weak var sequenceLight5: UIImageView!
+    @IBOutlet weak var sequenceLight6: UIImageView!
+    @IBOutlet weak var sequenceLight7: UIImageView!
+    @IBOutlet weak var sequenceLight8: UIImageView!
+    @IBOutlet weak var sequenceLight9: UIImageView!
+    @IBOutlet weak var sequenceLight10: UIImageView!
+    @IBOutlet weak var sequenceLight11: UIImageView!
+    @IBOutlet weak var sequenceLight12: UIImageView!
+    
+    
+    /// List containing the sequence of lights to indicate index in sequence
+    private var sequenceLightList = [(UIImageView)]()
+    
     /// Logic object for the Simon game.
     var gameLogic: GameLogic?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gameLogic = GameLogic(stateObserver: self)
+        sequenceLightList.append(sequenceLight1)
+        sequenceLightList.append(sequenceLight2)
+        sequenceLightList.append(sequenceLight3)
+        sequenceLightList.append(sequenceLight4)
+        sequenceLightList.append(sequenceLight5)
+        sequenceLightList.append(sequenceLight5)
+        sequenceLightList.append(sequenceLight6)
+        sequenceLightList.append(sequenceLight7)
+        sequenceLightList.append(sequenceLight8)
+        sequenceLightList.append(sequenceLight9)
+        sequenceLightList.append(sequenceLight10)
+        sequenceLightList.append(sequenceLight11)
+        sequenceLightList.append(sequenceLight12)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,43 +56,35 @@ class ViewController: UIViewController, StateObserver {
     }
 
     
-    /// Example use of the game logic against a button press.
-    func buttonClicked(sender: UIButton)
-    {
-        /// Find out which button was pressed.
-        var buttonPressed: GameButton
-        buttonPressed = GameButton.Red
-        
-        /// Function returns a game state that can then be handled by the UI.
-        self.gameLogic!.checkButtonPressedWithGameButton(buttonPressed)
+    @IBAction func onRedButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Red)
     }
     
-    @IBAction func redButtonPressDown(sender: UIButton) {
-        redButtonBackground.image = UIImage(named: "red-press")
+    @IBAction func onYellowButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Yellow)
     }
-    @IBAction func redButtonPress(sender: UIButton) {
-        print("RED")
-        redButtonBackground.image = UIImage(named: "red")
+    @IBAction func onGreenButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Green)
+    }
+    @IBAction func onBlueButtonTouchUp(sender: UIButton) {
+        self.gameLogic!.checkButtonPressedWithGameButton(GameButton.Blue)
     }
     
-    @IBAction func yellowButtonPressDown(sender: UIButton) {
-        yellowButtonBackground.image = UIImage(named: "yellow-press")
-    }
-    @IBAction func yellowButtonPress(sender: UIButton) {
-        yellowButtonBackground.image = UIImage(named: "yellow")
-        print("yellow")
-    }
     /// The methods below will be called upon an update in the game's status.
     /// Refer to the GameState enum in GameLogic for detailed description of each
     /// state, then decide on how to handle it with the UI.
-    func onGameSuccess()
+    func onSequenceSuccess()
     {
         /// Handle for if the user successfully completes an entire sequence.
+        // TODO: remove this
+        print("success")
     }
     
     func onGameFail()
     {
         /// Handle for if the user fails the game.
+        // TODO: remove this
+        print("fail")
     }
     
     func onGameRoundComplete()
@@ -76,12 +95,5 @@ class ViewController: UIViewController, StateObserver {
     func onGameNewGame()
     {
         /// Handle for if user desires to start a new game.
-    }
-    
-    func onGameCorrectMatch()
-    {
-        /// Handle for if user has managed a correct single match within a sequence.
-        /// We might not need this one, I just have it for posterity's sake.
-        /// Feel free to remove this method if you do not use it.
     }
 }

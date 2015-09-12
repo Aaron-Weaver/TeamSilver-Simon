@@ -13,15 +13,13 @@ import Foundation
 */
 protocol StateObserver
 {
-    func onGameSuccess()
+    func onSequenceSuccess()
     
     func onGameFail()
     
     func onGameRoundComplete()
     
     func onGameNewGame()
-    
-    func onGameCorrectMatch()
 }
 
 /**
@@ -119,6 +117,10 @@ class GameLogic
             default:
                 break
         }
+        // TODO: remove this loop
+        for button in sequenceList {
+            print(button)
+        }
     }
     
     /**
@@ -150,7 +152,7 @@ class GameLogic
                 }
                 
                 addRandomButtonToSequence()
-                self.stateObserver.onGameSuccess()
+                self.stateObserver.onSequenceSuccess()
                 break
             
             /// Reset back to initial game state and update score to reflect a fail state.
@@ -170,7 +172,6 @@ class GameLogic
             /// Add to sequence index after making a correct match within the proper sequence.
             case GameState.CorrectMatch:
                 currentSequenceIndex++
-                self.stateObserver.onGameCorrectMatch()
                 break
             
             /// Reset game back to initial state.
