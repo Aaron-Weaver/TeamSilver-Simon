@@ -27,11 +27,10 @@ class ViewController: UIViewController, StateObserver {
     @IBOutlet weak var currentScore: UILabel!
     @IBOutlet weak var highestScore: UILabel!
     
-    @IBOutlet weak var redButton: SOXShapedTapButton!
-    @IBOutlet weak var yellowButton: SOXShapedTapButton!
-    @IBOutlet weak var greenButton: SOXShapedTapButton!
-    @IBOutlet weak var blueButton: SOXShapedTapButton!
-    
+    @IBOutlet weak var blueButton: UIButton!
+    @IBOutlet weak var greenButton: UIButton!
+    @IBOutlet weak var yellowButton: UIButton!
+    @IBOutlet weak var redButton: UIButton!
     /// List containing the sequence of lights to indicate index in sequence
     private var sequenceLightList = [(UIImageView)]()
     
@@ -58,7 +57,6 @@ class ViewController: UIViewController, StateObserver {
         sequenceLightList.append(sequenceLight12)
         
         updateScoreLabels()
-        lightUpSequence((gameLogic?.getButtonSequence())!)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -184,6 +182,41 @@ class ViewController: UIViewController, StateObserver {
         highestScore.text = String(gameLogic!.getHighScore())
     }
     
+    private func lightSequenceLight(sequenceLight: UIImageView, index: Int, lightOn: Bool)
+    {
+        var imageName: String = ""
+        
+        if lightOn && index <= 6
+        {
+            imageName = "light-on-rotated"
+        }
+        else if lightOn
+        {
+            imageName = "light-on-rotated2"
+        }
+        else if !lightOn && index <= 6
+        {
+            imageName = "light-off-rotated"
+        }
+        else
+        {
+            imageName = "light-off-rotated2"
+        }
+        
+        if let image = UIImage(named: imageName)
+        {
+            sequenceLight.image = image
+        }
+    }
+    
+    private func extinguishAllLights()
+    {
+        for var i = 0; i < sequenceLightList.count; i++
+        {
+            lightSequenceLight(sequenceLightList[i], index: i, lightOn: false)
+        }
+    }
+    
     /// The methods below will be called upon an update in the game's status.
     /// Refer to the GameState enum in GameLogic for detailed description of each
     /// state, then decide on how to handle it with the UI.
@@ -192,10 +225,9 @@ class ViewController: UIViewController, StateObserver {
         /// Handle for if the user successfully completes an entire sequence.
         // TODO: remove this
         print("success")
-        self.lightSequenceLight(self.sequenceLightList[sequenceLightIndex], lightOn: true, index: sequenceLightIndex)
+        self.lightSequenceLight(self.sequenceLightList[sequenceLightIndex], index: sequenceLightIndex, lightOn: true)
         sequenceLightIndex++
         updateScoreLabels()
-        lightUpSequence((gameLogic?.getButtonSequence())!)
     }
     
     func onGameFail()

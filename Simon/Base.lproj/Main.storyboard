@@ -117,11 +117,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="blueButton" destination="dH6-Mu-iye" id="mLg-Qr-div"/>
+                        <outlet property="blueButton" destination="dH6-Mu-iye" id="mPL-gl-gaG"/>
                         <outlet property="currentScore" destination="wta-Uf-eXN" id="T6z-aL-hRM"/>
-                        <outlet property="greenButton" destination="Rfw-AO-bx8" id="J4f-gY-U4w"/>
+                        <outlet property="greenButton" destination="Rfw-AO-bx8" id="ENc-jB-Rbp"/>
                         <outlet property="highestScore" destination="W52-49-aXb" id="na6-e1-fMe"/>
-                        <outlet property="redButton" destination="rwv-xh-g6i" id="Ntm-1h-e3s"/>
+                        <outlet property="redButton" destination="rwv-xh-g6i" id="sty-X7-Bpn"/>
                         <outlet property="sequenceLight1" destination="30n-Rz-vUA" id="lwe-wM-cx1"/>
                         <outlet property="sequenceLight10" destination="1hG-jP-syM" id="rma-Lz-GLM"/>
                         <outlet property="sequenceLight11" destination="8tr-Mx-goX" id="APN-a7-JhF"/>
@@ -134,7 +134,7 @@
                         <outlet property="sequenceLight7" destination="Rbo-v3-EGp" id="YFE-oc-lS6"/>
                         <outlet property="sequenceLight8" destination="JJ2-H4-4e6" id="IbG-LP-veY"/>
                         <outlet property="sequenceLight9" destination="ekH-Zm-pTs" id="Z4r-6B-YJe"/>
-                        <outlet property="yellowButton" destination="qo5-4b-cRx" id="Yk8-hn-ilh"/>
+                        <outlet property="yellowButton" destination="qo5-4b-cRx" id="tO0-o7-8oj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
