@@ -90,7 +90,6 @@ class GameLogic
     {
         self.stateObserver = stateObserver
         addRandomButtonToSequence()
-        checkButtonPressedWithGameButton(self.sequenceList[0])
     }
     
     /** 

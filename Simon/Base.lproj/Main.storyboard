@@ -49,35 +49,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="####" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W52-49-aXb">
-                                <rect key="frame" x="362" y="52" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-4b-cRx" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="219" width="314" height="160"/>
-                                <state key="normal" title="Button" image="yellow"/>
-                                <connections>
-                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ci-DO-lCI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwv-xh-g6i" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="60" width="157" height="319"/>
+                                <rect key="frame" x="0.0" y="62" width="157" height="319"/>
                                 <state key="normal" title="Button" image="red"/>
                                 <connections>
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="955-43-Hbk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="508" y="60" width="159" height="315"/>
+                                <rect key="frame" x="508" y="62" width="159" height="315"/>
                                 <state key="normal" title="Button" image="blue"/>
                                 <connections>
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD0-W5-ExY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="352" y="216" width="315" height="159"/>
+                                <rect key="frame" x="352" y="218" width="315" height="159"/>
                                 <state key="normal" title="Button" image="green"/>
                                 <connections>
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PI3-HP-PXM"/>
@@ -111,12 +98,30 @@
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BrT-st-Yur"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-4b-cRx" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="221" width="314" height="160"/>
+                                <state key="normal" title="Button" image="yellow"/>
+                                <connections>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ci-DO-lCI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="####" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W52-49-aXb">
+                                <rect key="frame" x="362" y="50" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="blueButton" destination="dH6-Mu-iye" id="mLg-Qr-div"/>
+                        <outlet property="currentScore" destination="wta-Uf-eXN" id="T6z-aL-hRM"/>
+                        <outlet property="greenButton" destination="Rfw-AO-bx8" id="J4f-gY-U4w"/>
+                        <outlet property="highestScore" destination="W52-49-aXb" id="na6-e1-fMe"/>
+                        <outlet property="redButton" destination="rwv-xh-g6i" id="Ntm-1h-e3s"/>
                         <outlet property="sequenceLight1" destination="30n-Rz-vUA" id="lwe-wM-cx1"/>
                         <outlet property="sequenceLight10" destination="1hG-jP-syM" id="rma-Lz-GLM"/>
                         <outlet property="sequenceLight11" destination="8tr-Mx-goX" id="APN-a7-JhF"/>
@@ -129,6 +134,7 @@
                         <outlet property="sequenceLight7" destination="Rbo-v3-EGp" id="YFE-oc-lS6"/>
                         <outlet property="sequenceLight8" destination="JJ2-H4-4e6" id="IbG-LP-veY"/>
                         <outlet property="sequenceLight9" destination="ekH-Zm-pTs" id="Z4r-6B-YJe"/>
+                        <outlet property="yellowButton" destination="qo5-4b-cRx" id="Yk8-hn-ilh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
