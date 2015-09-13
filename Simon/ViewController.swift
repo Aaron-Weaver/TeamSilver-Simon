@@ -57,6 +57,7 @@ class ViewController: UIViewController, StateObserver {
         sequenceLightList.append(sequenceLight12)
         
         updateScoreLabels()
+        showSequenceToUser(0)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -174,6 +175,114 @@ class ViewController: UIViewController, StateObserver {
 //    }
     
     /**
+        Discern correct button in a sequence to user.
+        Uses NSTimer to delay between each button highlighting.
+    */
+    private func showSequenceToUser(currentIndex: Int)
+    {
+        disableUserInput()
+        let gameButton: GameButton = (self.gameLogic?.getButtonSequence()[currentIndex])!
+        var buttonToShow: UIButton = UIButton()
+        var imageName: String = ""
+        
+        switch(gameButton)
+        {
+            case GameButton.Red:
+                imageName = "red-press"
+                buttonToShow = self.redButton
+                break
+            case GameButton.Yellow:
+                imageName = "yellow-press"
+                buttonToShow = self.yellowButton
+                break
+            case GameButton.Green:
+                imageName = "green-press"
+                buttonToShow = self.greenButton
+                break
+            case GameButton.Blue:
+                imageName = "blue-press"
+                buttonToShow = self.blueButton
+                break
+            default:
+                break
+        }
+        
+        if let image = UIImage(named: imageName)
+        {
+            let originalImage = buttonToShow.imageView?.image
+            
+            /**
+                Show button as highlighted.
+            */
+            buttonToShow.imageView?.image = image
+            
+            let params: [String: AnyObject] = ["gameButton": buttonToShow as AnyObject, "image": originalImage as! AnyObject, "index": currentIndex as AnyObject]
+            
+            // Start timer to unhighlight button.
+            NSTimer.scheduledTimerWithTimeInterval(
+                0.5,
+                target: self,
+                selector: Selector("unlightSequenceButton:"),
+                userInfo: params,
+                repeats: false)
+        }
+    }
+    
+    /**
+        Go-between for the NSTimer that continues to the next button in the sequence.
+    */
+    func continueSequence(timer: NSTimer)
+    {
+        let index = timer.userInfo as! Int
+        showSequenceToUser(index)
+    }
+    
+    /**
+        Function called on timer to unhighlight a specific button within a sequence.
+    */
+    func unlightSequenceButton(timer: NSTimer)
+    {
+        let userInfo = timer.userInfo as! [String: AnyObject]
+        let image = userInfo["image"] as! UIImage
+        let button = userInfo["gameButton"] as! UIButton
+        var index = userInfo["index"] as! Int
+        
+        button.imageView?.image = image
+        
+        if index < (self.gameLogic?.getButtonSequence().count)! - 1
+        {
+            index = index + 1
+            // Make call to highlight next button in sequence.
+            NSTimer.scheduledTimerWithTimeInterval(
+                0.5,
+                target: self,
+                selector: Selector("continueSequence:"),
+                userInfo: index,
+                repeats: false)
+        }
+        else
+        {
+            enableUserInput()
+        }
+    }
+    
+    private func disableUserInput()
+    {
+        redButton.enabled = false
+        blueButton.enabled = false
+        yellowButton.enabled = false
+        greenButton.enabled = false
+    }
+    
+    private func enableUserInput()
+    {
+        redButton.enabled = true
+        blueButton.enabled = true
+        yellowButton.enabled = true
+        greenButton.enabled = true
+    }
+    
+    /**
         Updates both score labels using values from GameLogic.
     */
     private func updateScoreLabels()
@@ -228,6 +337,7 @@ class ViewController: UIViewController, StateObserver {
         self.lightSequenceLight(self.sequenceLightList[sequenceLightIndex], index: sequenceLightIndex, lightOn: true)
         sequenceLightIndex++
         updateScoreLabels()
+        showSequenceToUser(0)
     }
     
     func onGameFail()
@@ -238,6 +348,7 @@ class ViewController: UIViewController, StateObserver {
         sequenceLightIndex = 0
         extinguishAllLights()
         updateScoreLabels()
+        showSequenceToUser(0)
     }
     
     func onGameRoundComplete()
@@ -246,6 +357,7 @@ class ViewController: UIViewController, StateObserver {
         print("round complete")
         extinguishAllLights()
         updateScoreLabels()
+        showSequenceToUser(0)
     }
     
     func onGameNewGame()
@@ -254,5 +366,6 @@ class ViewController: UIViewController, StateObserver {
         print("new game")
         extinguishAllLights()
         updateScoreLabels()
+        showSequenceToUser(0)
     }
 }
