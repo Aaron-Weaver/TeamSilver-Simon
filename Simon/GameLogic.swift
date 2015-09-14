@@ -90,6 +90,7 @@ class GameLogic
     {
         self.stateObserver = stateObserver
         addRandomButtonToSequence()
+        checkButtonPressedWithGameButton(self.sequenceList[0])
     }
     
     /** 
@@ -147,8 +148,7 @@ class GameLogic
                 
                 if Scores.highestScore < Scores.currentScore
                 {
-                    Scores.highestScore = Scores.currentScore
-                    setHighScore()
+                   Scores.highestScore = Scores.currentScore
                 }
                 
                 addRandomButtonToSequence()
@@ -230,24 +230,9 @@ class GameLogic
         checkGameState(currentGameState)
     }
     
-    func setHighScore()
-    {
-        let highscore = Scores.highestScore
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setValue(highscore, forKey: "highscore")
-        userDefaults.synchronize()
-    }
-    
     func getHighScore() -> Int
     {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        
-        if let highscore = userDefaults.valueForKey("highscore") {
-            return highscore as! Int
-        }
-        else {
-            return Scores.highestScore
-        }
+        return Scores.highestScore
     }
     
     func getCurrentScore() -> Int
