@@ -147,7 +147,8 @@ class GameLogic
                 
                 if Scores.highestScore < Scores.currentScore
                 {
-                   Scores.highestScore = Scores.currentScore
+                    Scores.highestScore = Scores.currentScore
+                    setHighScore()
                 }
                 
                 addRandomButtonToSequence()
@@ -229,9 +230,24 @@ class GameLogic
         checkGameState(currentGameState)
     }
     
+    func setHighScore()
+    {
+        let highscore = Scores.highestScore
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setValue(highscore, forKey: "highscore")
+        userDefaults.synchronize()
+    }
+    
     func getHighScore() -> Int
     {
-        return Scores.highestScore
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if let highscore = userDefaults.valueForKey("highscore") {
+            return highscore as! Int
+        }
+        else {
+            return Scores.highestScore
+        }
     }
     
     func getCurrentScore() -> Int
