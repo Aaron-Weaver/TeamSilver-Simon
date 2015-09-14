@@ -56,13 +56,6 @@
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="955-43-Hbk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="508" y="62" width="159" height="315"/>
-                                <state key="normal" title="Button" image="blue"/>
-                                <connections>
-                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD0-W5-ExY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="352" y="218" width="315" height="159"/>
                                 <state key="normal" title="Button" image="green"/>
@@ -111,6 +104,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                                <rect key="frame" x="508" y="62" width="159" height="315"/>
+                                <state key="normal" title="Button" image="blue"/>
+                                <connections>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD0-W5-ExY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -121,6 +121,7 @@
                         <outlet property="currentScore" destination="wta-Uf-eXN" id="T6z-aL-hRM"/>
                         <outlet property="greenButton" destination="Rfw-AO-bx8" id="ENc-jB-Rbp"/>
                         <outlet property="highestScore" destination="W52-49-aXb" id="na6-e1-fMe"/>
+                        <outlet property="newGameButton" destination="qNn-Un-l3D" id="4A6-89-s8j"/>
                         <outlet property="redButton" destination="rwv-xh-g6i" id="sty-X7-Bpn"/>
                         <outlet property="sequenceLight1" destination="30n-Rz-vUA" id="lwe-wM-cx1"/>
                         <outlet property="sequenceLight10" destination="1hG-jP-syM" id="rma-Lz-GLM"/>

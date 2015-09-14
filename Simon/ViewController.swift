@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, StateObserver {
     
+    private let timeBetweenButtonSequence = 0.5
+    
     /// Declare delegates for sequence lights
     @IBOutlet weak var sequenceLight1: UIImageView!
     @IBOutlet weak var sequenceLight2: UIImageView!
@@ -31,6 +33,7 @@ class ViewController: UIViewController, StateObserver {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var redButton: UIButton!
+    @IBOutlet weak var newGameButton: UIButton!
     /// List containing the sequence of lights to indicate index in sequence
     private var sequenceLightList = [(UIImageView)]()
     
@@ -57,7 +60,7 @@ class ViewController: UIViewController, StateObserver {
         sequenceLightList.append(sequenceLight12)
         
         updateScoreLabels()
-        showSequenceToUser(0)
+        sequenceTimer(0)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -98,81 +101,16 @@ class ViewController: UIViewController, StateObserver {
         }
     }
     
-//    func lightUpSequence(sequenceList: [(GameButton)])
-//    {
-//        print("LIGHT UP SEQUENCE")
-//        var imageName: String = ""
-//        var buttonToShow: UIButton = UIButton()
-//        
-//        for var i = 0; i < sequenceList.count; i++
-//        {
-//            let gameButton: GameButton = sequenceList[i]
-//            
-//            switch(gameButton)
-//            {
-//                case GameButton.Red:
-//                    imageName = "red-press"
-//                    buttonToShow = self.redButton
-//                    break
-//                case GameButton.Yellow:
-//                    imageName = "yellow-press"
-//                    buttonToShow = self.yellowButton
-//                    break
-//                case GameButton.Green:
-//                    imageName = "green-press"
-//                    buttonToShow = self.greenButton
-//                    break
-//                case GameButton.Blue:
-//                    imageName = "blue-press"
-//                    buttonToShow = self.blueButton
-//                    break
-//                default:
-//                    break
-//            }
-//            
-//            print(imageName)
-//            
-//            if let image = UIImage(named: imageName)
-//            {
-//                //lightOnGameSequenceButton(buttonToShow, image: image)
-//                let originalImage = buttonToShow.imageView?.image
-//                
-//                buttonToShow.imageView?.image = image
-//                
-//                buttonToShow.imageView?.image = originalImage
-//            }
-//        }
-//    }
-//    
-//    func lightOnGameSequenceButton(button: UIButton, image: UIImage)
-//    {
-//        print("LIGHT ON GAME SEQUENCE")
-//        let originalImage: UIImage = (button.imageView?.image)!
-//        
-//        button.imageView!.image = image
-//        
-//        sequenceLightTimer(button, image: originalImage)
-//    }
-//    
-//    func lightOffGameSequenceButton(timer: NSTimer)
-//    {
-//        let userInfo = timer.userInfo as! [String:AnyObject]
-//        let button = userInfo["gameButton"] as! UIButton
-//        let image = userInfo["image"] as! UIImage
-//        
-//        button.imageView?.image = image
-//    }
-//    
-//    func sequenceLightTimer(button: UIButton, image: UIImage)
-//    {
-//        let params: [String:AnyObject] = ["gameButton":button, "image":image]
-//        
-//        NSTimer.scheduledTimerWithTimeInterval(1.0,
-//            target: self,
-//            selector: Selector("lightOffGameSequenceButton:"),
-//            userInfo: params,
-//            repeats: false)
-//    }
+    private func sequenceTimer(index: Int)
+    {
+        disableUserInput()
+        NSTimer.scheduledTimerWithTimeInterval(
+            timeBetweenButtonSequence,
+            target: self,
+            selector: Selector("continueSequence:"),
+            userInfo: index,
+            repeats: false)
+    }
     
     /**
         Discern correct button in a sequence to user.
@@ -180,7 +118,6 @@ class ViewController: UIViewController, StateObserver {
     */
     private func showSequenceToUser(currentIndex: Int)
     {
-        disableUserInput()
         let gameButton: GameButton = (self.gameLogic?.getButtonSequence()[currentIndex])!
         var buttonToShow: UIButton = UIButton()
         var imageName: String = ""
@@ -220,7 +157,7 @@ class ViewController: UIViewController, StateObserver {
             
             // Start timer to unhighlight button.
             NSTimer.scheduledTimerWithTimeInterval(
-                0.5,
+                timeBetweenButtonSequence,
                 target: self,
                 selector: Selector("unlightSequenceButton:"),
                 userInfo: params,
@@ -253,12 +190,7 @@ class ViewController: UIViewController, StateObserver {
         {
             index = index + 1
             // Make call to highlight next button in sequence.
-            NSTimer.scheduledTimerWithTimeInterval(
-                0.5,
-                target: self,
-                selector: Selector("continueSequence:"),
-                userInfo: index,
-                repeats: false)
+            sequenceTimer(index)
         }
         else
         {
@@ -269,9 +201,15 @@ class ViewController: UIViewController, StateObserver {
     private func disableUserInput()
     {
         redButton.enabled = false
+        redButton.setBackgroundImage(UIImage(named: "red"), forState: UIControlState.Disabled)
         blueButton.enabled = false
+        blueButton.setBackgroundImage(UIImage(named: "blue"), forState: UIControlState.Disabled)
         yellowButton.enabled = false
+        yellowButton.setBackgroundImage(UIImage(named: "yellow"), forState: UIControlState.Disabled)
         greenButton.enabled = false
+        greenButton.setBackgroundImage(UIImage(named: "green"), forState: UIControlState.Disabled)
+        newGameButton.enabled = false
+        newGameButton.setBackgroundImage(UIImage(named: "new"), forState: UIControlState.Disabled)
     }
     
     private func enableUserInput()
@@ -280,6 +218,7 @@ class ViewController: UIViewController, StateObserver {
         blueButton.enabled = true
         yellowButton.enabled = true
         greenButton.enabled = true
+        newGameButton.enabled = true
     }
     
     /**
@@ -337,7 +276,7 @@ class ViewController: UIViewController, StateObserver {
         self.lightSequenceLight(self.sequenceLightList[sequenceLightIndex], index: sequenceLightIndex, lightOn: true)
         sequenceLightIndex++
         updateScoreLabels()
-        showSequenceToUser(0)
+        sequenceTimer(0)
     }
     
     func onGameFail()
@@ -348,7 +287,7 @@ class ViewController: UIViewController, StateObserver {
         sequenceLightIndex = 0
         extinguishAllLights()
         updateScoreLabels()
-        showSequenceToUser(0)
+        sequenceTimer(0)
     }
     
     func onGameRoundComplete()
@@ -357,7 +296,7 @@ class ViewController: UIViewController, StateObserver {
         print("round complete")
         extinguishAllLights()
         updateScoreLabels()
-        showSequenceToUser(0)
+        sequenceTimer(0)
     }
     
     func onGameNewGame()
@@ -366,6 +305,6 @@ class ViewController: UIViewController, StateObserver {
         print("new game")
         extinguishAllLights()
         updateScoreLabels()
-        showSequenceToUser(0)
+        sequenceTimer(0)
     }
 }
