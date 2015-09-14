@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KHh-WJ-mXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KHh-WJ-mXX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,14 +18,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-mj-25j" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="35" width="344" height="340"/>
-                                <state key="normal" title="Continue" image="launchscreen-red"/>
+                                <state key="normal" title="Continue" image="Start"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="Lht-wx-Tdu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grd-Wj-l3D" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="344" y="35" width="323" height="340"/>
-                                <state key="normal" title="Button" image="launchscreen-blue"/>
+                                <state key="normal" title="Button" image="Continue"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BL4-ZW-ICu">
                                 <rect key="frame" x="56" y="253" width="98" height="23"/>
@@ -180,10 +180,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Continue" width="667" height="667"/>
+        <image name="Start" width="667" height="667"/>
         <image name="blue" width="333" height="667"/>
         <image name="green" width="667" height="333"/>
-        <image name="launchscreen-blue" width="667" height="667"/>
-        <image name="launchscreen-red" width="667" height="667"/>
         <image name="light-off-rotated" width="103" height="104"/>
         <image name="light-off-rotated2" width="103" height="104"/>
         <image name="light-on-rotated" width="103" height="104"/>
