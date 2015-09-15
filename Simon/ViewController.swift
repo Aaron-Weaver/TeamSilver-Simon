@@ -54,7 +54,6 @@ class ViewController: UIViewController, StateObserver {
         sequenceLightList.append(sequenceLight3)
         sequenceLightList.append(sequenceLight4)
         sequenceLightList.append(sequenceLight5)
-        sequenceLightList.append(sequenceLight5)
         sequenceLightList.append(sequenceLight6)
         sequenceLightList.append(sequenceLight7)
         sequenceLightList.append(sequenceLight8)
@@ -281,7 +280,7 @@ class ViewController: UIViewController, StateObserver {
     {
         var imageName: String = ""
         
-        if lightOn && index <= 6
+        if lightOn && index < 6
         {
             imageName = "light-on-rotated"
         }
@@ -289,7 +288,7 @@ class ViewController: UIViewController, StateObserver {
         {
             imageName = "light-on-rotated2"
         }
-        else if !lightOn && index <= 6
+        else if !lightOn && index < 6
         {
             imageName = "light-off-rotated"
         }
