@@ -14,6 +14,18 @@
 		1C27AAA91B98887B001A586B /* SimonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AAA81B98887B001A586B /* SimonTests.swift */; };
 		1C27AAB41B98887B001A586B /* SimonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AAB31B98887B001A586B /* SimonUITests.swift */; };
 		1C579E911B9FC59E009A52F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27AA951B98887A001A586B /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1C61A6221BA7D77700EE8509 /* blue-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61C1BA7D77700EE8509 /* blue-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6231BA7D77700EE8509 /* blue-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61C1BA7D77700EE8509 /* blue-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6241BA7D77700EE8509 /* continue-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61D1BA7D77700EE8509 /* continue-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6251BA7D77700EE8509 /* continue-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61D1BA7D77700EE8509 /* continue-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6261BA7D77700EE8509 /* green-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61E1BA7D77700EE8509 /* green-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6271BA7D77700EE8509 /* green-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61E1BA7D77700EE8509 /* green-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6281BA7D77700EE8509 /* new-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61F1BA7D77700EE8509 /* new-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A6291BA7D77700EE8509 /* new-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A61F1BA7D77700EE8509 /* new-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A62A1BA7D77700EE8509 /* red-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A6201BA7D77700EE8509 /* red-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A62B1BA7D77700EE8509 /* red-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A6201BA7D77700EE8509 /* red-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A62C1BA7D77700EE8509 /* yellow-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A6211BA7D77700EE8509 /* yellow-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
+		1C61A62D1BA7D77700EE8509 /* yellow-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C61A6211BA7D77700EE8509 /* yellow-sound.mp3 */; settings = {ASSET_TAGS = (); }; };
 		1CB728CD1B9E1E2F005B4DFB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */; };
 		1CB728CE1B9E1E2F005B4DFB /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */; };
 		1CB728D01B9EA432005B4DFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB728CF1B9EA432005B4DFB /* Images.xcassets */; };
@@ -53,6 +65,12 @@
 		1C27AAAF1B98887B001A586B /* SimonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C27AAB31B98887B001A586B /* SimonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonUITests.swift; sourceTree = "<group>"; };
 		1C27AAB51B98887B001A586B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C61A61C1BA7D77700EE8509 /* blue-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "blue-sound.mp3"; sourceTree = "<group>"; };
+		1C61A61D1BA7D77700EE8509 /* continue-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "continue-sound.mp3"; sourceTree = "<group>"; };
+		1C61A61E1BA7D77700EE8509 /* green-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "green-sound.mp3"; sourceTree = "<group>"; };
+		1C61A61F1BA7D77700EE8509 /* new-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "new-sound.mp3"; sourceTree = "<group>"; };
+		1C61A6201BA7D77700EE8509 /* red-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "red-sound.mp3"; sourceTree = "<group>"; };
+		1C61A6211BA7D77700EE8509 /* yellow-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "yellow-sound.mp3"; sourceTree = "<group>"; };
 		1CB728CC1B9E1E2F005B4DFB /* GameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		1CB728CF1B9EA432005B4DFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1CB728D91B9EAF13005B4DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Simon/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +125,7 @@
 		1C27AA921B98887A001A586B /* Simon */ = {
 			isa = PBXGroup;
 			children = (
+				1C61A61B1BA7D76800EE8509 /* Sounds */,
 				1CB728CB1B9E1C0F005B4DFB /* Model */,
 				1C27AA931B98887A001A586B /* AppDelegate.swift */,
 				1C27AA951B98887A001A586B /* ViewController.swift */,
@@ -136,6 +155,19 @@
 				1C27AAB51B98887B001A586B /* Info.plist */,
 			);
 			path = SimonUITests;
+			sourceTree = "<group>";
+		};
+		1C61A61B1BA7D76800EE8509 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1C61A61C1BA7D77700EE8509 /* blue-sound.mp3 */,
+				1C61A61D1BA7D77700EE8509 /* continue-sound.mp3 */,
+				1C61A61E1BA7D77700EE8509 /* green-sound.mp3 */,
+				1C61A61F1BA7D77700EE8509 /* new-sound.mp3 */,
+				1C61A6201BA7D77700EE8509 /* red-sound.mp3 */,
+				1C61A6211BA7D77700EE8509 /* yellow-sound.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		1CB728CB1B9E1C0F005B4DFB /* Model */ = {
@@ -249,10 +281,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C61A6261BA7D77700EE8509 /* green-sound.mp3 in Resources */,
+				1C61A6221BA7D77700EE8509 /* blue-sound.mp3 in Resources */,
+				1C61A6241BA7D77700EE8509 /* continue-sound.mp3 in Resources */,
+				1C61A6281BA7D77700EE8509 /* new-sound.mp3 in Resources */,
+				1C61A62C1BA7D77700EE8509 /* yellow-sound.mp3 in Resources */,
 				1C27AA9E1B98887A001A586B /* LaunchScreen.storyboard in Resources */,
 				1CB728D01B9EA432005B4DFB /* Images.xcassets in Resources */,
 				1C27AA9B1B98887A001A586B /* Assets.xcassets in Resources */,
 				1CB728DA1B9EAF13005B4DFB /* Main.storyboard in Resources */,
+				1C61A62A1BA7D77700EE8509 /* red-sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +298,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C61A62D1BA7D77700EE8509 /* yellow-sound.mp3 in Resources */,
+				1C61A62B1BA7D77700EE8509 /* red-sound.mp3 in Resources */,
+				1C61A6231BA7D77700EE8509 /* blue-sound.mp3 in Resources */,
 				1CB728D11B9EA432005B4DFB /* Images.xcassets in Resources */,
+				1C61A6271BA7D77700EE8509 /* green-sound.mp3 in Resources */,
+				1C61A6291BA7D77700EE8509 /* new-sound.mp3 in Resources */,
 				1CB728DB1B9EAF13005B4DFB /* Main.storyboard in Resources */,
+				1C61A6251BA7D77700EE8509 /* continue-sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

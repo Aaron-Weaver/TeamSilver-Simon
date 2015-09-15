@@ -77,7 +77,7 @@ class GameLogic
     private var currentSequenceIndex = 0
     
     /// Max number of possible buttons in a sequence per round.
-    private let maxSequenceItemNum = 12
+    private let maxSequenceItemNum = 3
     
     private var stateObserver: StateObserver
     
@@ -125,7 +125,7 @@ class GameLogic
     /**
         Remove all buttons from the sequence then add one to the now empty sequence.
     */
-    private func resetSequence()
+    func resetSequence()
     {
         currentSequenceIndex = 0
         Scores.currentScore = 0
@@ -165,6 +165,7 @@ class GameLogic
             case GameState.RoundComplete:
                 Scores.currentScore = maxSequenceItemNum
                 Scores.highestScore = Scores.currentScore
+                setHighScore()
                 resetSequence()
                 self.stateObserver.onGameRoundComplete()
                 break
@@ -176,7 +177,6 @@ class GameLogic
             
             /// Reset game back to initial state.
             case GameState.NewGame:
-                resetSequence()
                 self.stateObserver.onGameNewGame()
                 break
         }
@@ -221,12 +221,6 @@ class GameLogic
             currentGameState = GameState.Fail
         }
         
-        checkGameState(currentGameState)
-    }
-    
-    func reinitializeGame()
-    {
-        let currentGameState = GameState.NewGame
         checkGameState(currentGameState)
     }
     
