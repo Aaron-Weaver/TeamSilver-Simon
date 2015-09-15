@@ -128,6 +128,10 @@ class ViewController: UIViewController, StateObserver {
                 imageName = "red-press"
                 buttonToShow = self.redButton
                 break
+            case GameButton.Blue:
+                imageName = "blue-press"
+                buttonToShow = self.blueButton
+                break
             case GameButton.Yellow:
                 imageName = "yellow-press"
                 buttonToShow = self.yellowButton
@@ -136,22 +140,21 @@ class ViewController: UIViewController, StateObserver {
                 imageName = "green-press"
                 buttonToShow = self.greenButton
                 break
-            case GameButton.Blue:
-                imageName = "blue-press"
-                buttonToShow = self.blueButton
-                break
             default:
                 break
         }
         
         if let image = UIImage(named: imageName)
         {
+            print("Showing lit button now")
             let originalImage = buttonToShow.imageView?.image
             
             /**
                 Show button as highlighted.
             */
-            buttonToShow.imageView?.image = image
+            //buttonToShow.imageView?.image = image
+            buttonToShow.setImage(image, forState: UIControlState.Normal)
+            buttonToShow.backgroundImageForState(UIControlState.Highlighted)
             
             let params: [String: AnyObject] = ["gameButton": buttonToShow as AnyObject, "image": originalImage as! AnyObject, "index": currentIndex as AnyObject]
             
@@ -184,7 +187,7 @@ class ViewController: UIViewController, StateObserver {
         let button = userInfo["gameButton"] as! UIButton
         var index = userInfo["index"] as! Int
         
-        button.imageView?.image = image
+        button.setImage(image, forState: UIControlState.Normal)
         
         if index < (self.gameLogic?.getButtonSequence().count)! - 1
         {
@@ -209,7 +212,7 @@ class ViewController: UIViewController, StateObserver {
         greenButton.enabled = false
         greenButton.setBackgroundImage(UIImage(named: "green"), forState: UIControlState.Disabled)
         newGameButton.enabled = false
-        newGameButton.setBackgroundImage(UIImage(named: "new"), forState: UIControlState.Disabled)
+        newGameButton.setBackgroundImage(UIImage(named: "new-game"), forState: UIControlState.Disabled)
     }
     
     private func enableUserInput()

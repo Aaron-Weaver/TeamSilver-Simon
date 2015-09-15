@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8pF-FV-1Va">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8pF-FV-1Va">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-gQ-oko">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="30n-Rz-vUA" userLabel="sequenceLight1">
                                 <rect key="frame" x="42" y="46" width="54" height="56"/>
                             </imageView>
@@ -56,13 +59,6 @@
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="955-43-Hbk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
-                                <rect key="frame" x="352" y="218" width="315" height="159"/>
-                                <state key="normal" title="Button" image="green"/>
-                                <connections>
-                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PI3-HP-PXM"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="light-off-rotated" highlightedImage="light-on-rotated" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-wi-GXJ" userLabel="sequenceLight3">
                                 <rect key="frame" x="136" y="140" width="54" height="56"/>
                             </imageView>
@@ -86,7 +82,7 @@
                             </imageView>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNn-Un-l3D" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="259" y="113" width="149" height="149"/>
-                                <state key="normal" image="new"/>
+                                <state key="normal" image="new-game"/>
                                 <connections>
                                     <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BrT-st-Yur"/>
                                 </connections>
@@ -104,11 +100,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-Mu-iye" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-AO-bx8" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
+                                <rect key="frame" x="352" y="218" width="315" height="159"/>
+                                <state key="normal" title="Button" image="green"/>
+                                <connections>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PI3-HP-PXM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-Sk-JMH" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="508" y="62" width="159" height="315"/>
                                 <state key="normal" title="Button" image="blue"/>
                                 <connections>
-                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD0-W5-ExY"/>
+                                    <action selector="onGameButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gra-j1-0VZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,7 +120,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="blueButton" destination="dH6-Mu-iye" id="mPL-gl-gaG"/>
+                        <outlet property="blueButton" destination="VyN-Sk-JMH" id="Jie-vG-MR2"/>
                         <outlet property="currentScore" destination="wta-Uf-eXN" id="T6z-aL-hRM"/>
                         <outlet property="greenButton" destination="Rfw-AO-bx8" id="ENc-jB-Rbp"/>
                         <outlet property="highestScore" destination="W52-49-aXb" id="na6-e1-fMe"/>
@@ -154,29 +157,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-start" translatesAutoresizingMaskIntoConstraints="NO" id="99e-I6-AZC">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohd-69-TfN" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="35" width="344" height="340"/>
-                                <state key="normal" title="Continue" image="Start"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="14J-ac-Pot"/>
-                                </connections>
+                                <state key="normal" title="Continue" image="continue"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-vF-9Jn" customClass="SOXShapedTapButton" customModule="Simon" customModuleProvider="target">
                                 <rect key="frame" x="344" y="35" width="323" height="340"/>
-                                <state key="normal" title="Button" image="Continue"/>
+                                <state key="normal" title="Button" image="new"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="yW1-XM-Eff"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urR-UA-3bx">
-                                <rect key="frame" x="56" y="253" width="98" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-qC-d1r">
-                                <rect key="frame" x="515" y="253" width="83" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -189,16 +183,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Continue" width="667" height="667"/>
-        <image name="Start" width="667" height="667"/>
-        <image name="blue" width="333" height="667"/>
-        <image name="green" width="667" height="333"/>
+        <image name="background" width="1334" height="750"/>
+        <image name="background-start" width="1334" height="750"/>
+        <image name="blue" width="334" height="667"/>
+        <image name="continue" width="667" height="667"/>
+        <image name="green" width="667" height="334"/>
         <image name="light-off-rotated" width="103" height="104"/>
         <image name="light-off-rotated2" width="103" height="104"/>
         <image name="light-on-rotated" width="103" height="104"/>
         <image name="light-on-rotated2" width="103" height="104"/>
-        <image name="new" width="298" height="298"/>
-        <image name="red" width="333" height="667"/>
-        <image name="yellow" width="667" height="333"/>
+        <image name="new" width="667" height="667"/>
+        <image name="new-game" width="298" height="298"/>
+        <image name="red" width="334" height="667"/>
+        <image name="yellow" width="667" height="334"/>
     </resources>
 </document>
