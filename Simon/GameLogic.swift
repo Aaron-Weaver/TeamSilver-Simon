@@ -77,7 +77,7 @@ class GameLogic
     private var currentSequenceIndex = 0
     
     /// Max number of possible buttons in a sequence per round.
-    private let maxSequenceItemNum = 3
+    private let maxSequenceItemNum = 12
     
     private var stateObserver: StateObserver
     
@@ -144,6 +144,13 @@ class GameLogic
             case GameState.Success:
                 currentSequenceIndex = 0
                 Scores.currentScore++
+                
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                
+                if let highscore: Int = userDefaults.valueForKey("highscore") as? Int
+                {
+                    Scores.highestScore = highscore
+                }
                 
                 if Scores.highestScore < Scores.currentScore
                 {
